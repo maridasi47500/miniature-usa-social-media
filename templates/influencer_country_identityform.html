@@ -1,0 +1,7 @@
+{% extends 'base.html' %}{% block content %}<form  enctype="multipart/form-data" method="POST">
+<div class="field"><label for="somefieldinfluencer_country_identityname">name</label><input type="text" id="somefieldinfluencer_country_identityname" name="name"/></div>
+<div class="field"><label for="somefieldinfluencer_country_identityidentity_type">identity_type</label><input type="text" id="somefieldinfluencer_country_identityidentity_type" name="identity_type"/></div>
+<div class="field"><label for="somefieldcountry_id">country_id</label><select id="somefieldcountry_id" name="country_id"><option value="novalue">no value</option>
+{% for somecountry in touslescountry %}
+<option value="{{ somecountry['id'] }}">{{ somecountry['name'] }}</option>{% endfor %}
+</select></div><div class="actions"><input type="submit"/></div></form>{% for x in influencer_country_identitys %}{{x["name"] }}{% endfor %}{% endblock %}{% block liens %}<a href="/">bienvenue</a><a href="/add_one_influencer_country_identity"> add one influencer_country_identity</a>{% endblock %}

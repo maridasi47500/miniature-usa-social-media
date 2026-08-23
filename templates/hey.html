@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block montitre %}
+debut de mes mots: bienvenue
+{% endblock %}
+{% block content %}
+<h1># miniature-usa-social-media</h1>
+{% for x in users | reverse %}
+ <li>{{ x["first_name"]  }}</li>
+
+{% endfor %} 
+fin de mes mots : choisis un pays où tu veux copier le sport, la musique/la culture. Souvent tu choisis usa (type didentité : sport, name : football americain, typ didentité : musique, name : roi/reine de la pop, du dancehall)
+Numero de carte à jouer K Q J, 10 9 8 etc. diamond spade club heart
+{% endblock %}
+{% block liens %}
+<a href="/">welcome</a>
+{% endblock %}
